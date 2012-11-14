@@ -1,0 +1,426 @@
+---
+# This is configuration file for font builder and other support scripts.
+# Format is descriped below.
+#
+#
+# # metadata, to generate demo & fontello info dialogs
+# meta:
+#
+#  author: Daniel Buce
+#  homepage: http://...
+#  email: ...
+#  twitter: http://twitter.com/...
+#  dribble: http://dribbble.com/...
+#  license: SIL
+#  license_url: http://scripts.sil.org/OFL
+#
+#   css-prefix: "icon-"             # prefix for css-generated classes
+#   demo-columns: 4                 # used for html demo page generation
+#
+# # Font headers. All vars from here will be used as font
+# # params in fontforge http://fontforge.sourceforge.net/python.html
+# font:
+#
+#   version: "1.0"
+#
+#   # use !!!small!!! letters a-z, or Opera will fail under OS X
+#   # fontname will be also used as file name.
+#   fontname: myfont
+#
+#   fullname: MyFont
+#   familyname: Myfont
+#
+#   copyright: Copyright (C) 2012 by xxxxxxxx
+#
+#   ascent: 1638
+#   descent: 410
+#   weight: Regular
+#
+#
+# #
+# # Optional. You can apply global rescale + offset to all font glyphs.
+# # Param values ar 0..1, where 1 = 100%. 
+# #
+# transform:
+#   baseline: 0.2                 # baseline for rescale symmetry. Default value
+#                                 # calculated from ascent/decsent
+#   rescale: 0.68                 # rescale glyphs and center around baseline
+#   offset: -0.1                  # shift up/down
+#
+# glyphs:
+#   - file: glyph1_file           # file name, without extention
+#     from: 0xNNN                 # Source code for remapper or merge tool
+#     code: 0xNNN                 # Symbol code 0x - hex
+#     css: icon-gpyph1-name       # For generated CSS
+#     search: [word1, word2]      # Search aliases (array). CSS name will be
+#                                 # included automatically
+#     src: first_font_alias       # alias to font for merge tool
+#                                 # list of aliases in src_fonts section
+#
+#     #
+#     # local transformations, only for this glyph (optional)
+#     #
+#     transform:                  # personal glyph transformation.
+#       rescale_rel               # *_rel - applyed after global.
+#       offset: 0.2               # without *_rel - override global
+#
+# #
+# # Fonts aliases used only in font merge tool
+# #
+# src_fonts:
+#   first_font_alias: "/absolute/path/to/first/font.ttf"
+#
+################################################################################
+#
+
+
+meta:
+  author: Mapbox
+  homepage: http://mapbox.com/maki/
+  twitter: http://twitter.com/mapbox
+  github: https://github.com/mapbox/maki
+  license: BSD
+  license_url: https://github.com/mapbox/maki/blob/gh-pages/LICENSE.txt
+
+  css_prefix: "icon-"
+  columns: 4
+
+transform:
+  baseline: 0.5
+  rescale: 1.2
+  # offset: -0.025
+
+font:
+  version: "1.0"
+
+  # use !!!small!!! letters a-z, or Opera will fail under OS X
+  # fontname will be also used as file name.
+  fontname: maki
+
+  fullname: Maki
+  familyname: Maki
+
+  copyright: Copyright (C) Mapbox, LCC
+
+  ascent: 850
+  descent: 150
+  weight: Normal
+
+
+glyphs:
+
+  -
+    css: aboveground-rail
+    code: 0xe800
+    uid: 88a1241bcbe45c8e9616fd34d0f68a55
+    search: [railway, streetcar]
+  -
+    css: airfield
+    code: 0xe801
+    uid: ee81e35eef77c7d4d26c75258f028bff
+    search: [airfield]
+  -
+    css: airport
+    code: 0xe802
+    uid: f7440aaf96d590adceeff59b4dcb32d0
+    search: [airport]
+  -
+    css: art-gallery
+    code: 0xe803
+    uid: 05417ae0104ab18a0fe454358579a987
+    search: [gallery]
+  -
+    css: bar
+    code: 0xe804
+    uid: 5c8822b310f20896a3c55a25b71008a8
+    search: [bar]
+  -
+    css: baseball
+    code: 0xe806
+    uid: dc4eb27cd8f0cd537206d00dd85c0286
+    search: [baseball]
+  -
+    css: basketball
+    code: 0xe807
+    uid: 9f5ce0d9f586e3df00449ad6ed6b0bf3
+    search: [basketball]
+  -
+    css: beer
+    code: 0xe808
+    uid: 77886ff217450e06c8ffb7c88cb41e8b
+    search: [beer]
+  -
+    css: belowground-rail
+    code: 0xe809
+    uid: 3fcff44d055ea3e68ea50aaa7d91947f
+    search: [railway, subway]
+  -
+    css: bicycle
+    code: 0xe80a
+    uid: aab7e7622e6ee1ed8166fb73f20e8c9a
+    search: [bicycle]
+  -
+    css: bus
+    code: 0xe80b
+    uid: 2b39f74a074e338a67270567e95142cb
+    search: [bus]
+  -
+    css: cafe
+    code: 0xe80c
+    uid: 492fe0ef4cb41d4e4de8502897685399
+    search: [cafe]
+  -
+    css: campsite
+    code: 0xe80d
+    uid: 244d3253e3ca5a0d602dd3574050fe93
+    search: [campsite]
+  -
+    css: cemetery
+    code: 0xe80e
+    uid: cc50849b33fcede3d861f5a94a22969f
+    search: [cemetery]
+  -
+    css: cinema
+    code: 0xe80f
+    uid: 3fe687c833fa36452029b6d57e9149bf
+    search: [cinema]
+  -
+    css: college
+    code: 0xe810
+    uid: 020dbfb0a5a4a25775bc751e5891e161
+    search: [college]
+  -
+    css: commerical-building
+    code: 0xe811
+    uid: fc455b9530e0b37facc289f42a120fdd
+    search: [building]
+  -
+    css: credit-card
+    code: 0xe812
+    uid: 5f1e8c36dffb553902e0e5c0c71faf6b
+    search: [card]
+  -
+    css: cricket
+    code: 0xe813
+    uid: 3dfa88388f5e84f8e8fdc4f6320c8b44
+    search: [cricket]
+  -
+    css: embassy
+    code: 0xe814
+    uid: aec75ed0b4851c282824143392dde047
+    search: [embassy]
+  -
+    css: fast-food
+    code: 0xe815
+    uid: d27bcf5c8638e4078aaadae1d49b6909
+    search: [fastfood, hamburger]
+  -
+    css: ferry
+    code: 0xe816
+    uid: 6d3728ea0e5678ab9cf6840c4a040e34
+    search: [ferry]
+  -
+    css: fire-station
+    code: 0xe817
+    uid: a9d3392264236bb9fe4d60a130c662d1
+    search: [fire station]
+  -
+    css: football
+    code: 0xe818
+    uid: 429c0a4a7c5aba2f8a894f98b48529b3
+    search: [football]
+  -
+    css: fuel
+    code: 0xe819
+    uid: 63af7ffdab0d3546333634c63554bb82
+    search: [fuel]
+  -
+    css: garden
+    code: 0xe81a
+    uid: d06b13f30947afbbdae6977413144183
+    search: [garden]
+  -
+    css: giraffe
+    code: 0xe81b
+    uid: 8815bdcacab2495dd436f029e78a15d7
+    search: [giraffe]
+  -
+    css: golf
+    code: 0xe81c
+    uid: 93f72325e13529f1673ae0c3be4b7d22
+    search: [golf]
+  -
+    css: grocery-store
+    code: 0xe81e
+    uid: 00341f8df1496285c31db5988db1d8b5
+    search: [grocery]
+  -
+    css: harbor
+    code: 0xe81f
+    uid: 484b90ec34c04b0db020143526d3c21a
+    search: [harbor]
+  -
+    css: heliport
+    code: 0xe820
+    uid: 6dddcfc03d1eaa1bfee628ab291072b6
+    search: [heliport]
+  -
+    css: hospital
+    code: 0xe821
+    uid: f43389fa3f5a5b152ed0231fe7bb18a7
+    search: [hospital]
+  -
+    css: industrial-building
+    code: 0xe822
+    uid: 134184de1e4f1dc3d40e0d93bb1ef15e
+    search: [building, industrial]
+  -
+    css: library
+    code: 0xe823
+    uid: 56a766cedf13005162899b02cf9546b9
+    search: [library]
+  -
+    css: lodging
+    code: 0xe824
+    uid: de3978220965d0d1b1cbe671a5a57f9a
+    search: [lodging]
+  -
+    css: london-underground
+    code: 0xe825
+    uid: 0b9e9d7b951b0acaac25b9d7ed258120
+    search: [underground]
+  -
+    css: minefield
+    code: 0xe826
+    uid: 3e98530afcd866a9d607f8be2b5aa159
+    search: [minefield]
+  -
+    css: monument
+    code: 0xe827
+    uid: 19d9ceb791d76257545e308954808fc1
+    search: [monument]
+  -
+    css: museum
+    code: 0xe828
+    uid: 192955900fa17f5677c4fdf2b3f01be7
+    search: [museum]
+  -
+    css: pharmacy
+    code: 0xe829
+    uid: ee10c11395b5660a1e10a19cd66ea654
+    search: [pharmacy]
+  -
+    css: pitch
+    code: 0xe82a
+    uid: 5040789d726273a910ac5b59e9d8227a
+    search: [pitch]
+  -
+    css: police
+    code: 0xe82b
+    uid: 2e7c67db76849147d16a6763d07a03a9
+    search: [police]
+  -
+    css: post
+    code: 0xe82c
+    uid: 3333e460aa2cf5a69989c42c334a4194
+    search: [post]
+  -
+    css: prison
+    code: 0xe82d
+    uid: 0151454c6a8abec62b1b8810aca0af6a
+    search: [prison]
+  -
+    css: rail
+    code: 0xe82e
+    uid: 70276caa975cb1354bc375ca334f6b4b
+    search: [rail]
+  -
+    css: religious-christian
+    code: 0xe82f
+    uid: 7f8b6c0519d85119a6f41fa3c5794806
+    search: [religious,christian]
+  -
+    css: religious-islam
+    code: 0xe830
+    uid: 2e99947836a643225daf0336e4814bb3
+    search: [religious,islam]
+  -
+    css: religious-jewish
+    code: 0xe831
+    uid: 5604bbb863d0ea7b38dc331705aedb13
+    search: [religious,jewish]
+  -
+    css: restaurant
+    code: 0xe832
+    uid: 5cc58545bb38c912940470480d3df145
+    search: [restaurant]
+  -
+    css: roadblock
+    code: 0xe833
+    uid: 40664a3e8916bfdcc5fb5655d469723e
+    search: [roadblock]
+  -
+    css: school
+    code: 0xe834
+    uid: 653750436fc99eeb29ccd487e6a5bfa6
+    search: [school]
+  -
+    css: shop
+    code: 0xe835
+    uid: 83a806d41893e8bc6fac601669c76cd2
+    search: [shop]
+  -
+    css: skiing
+    code: 0xe836
+    uid: ebabd8ff4b67bdbba7660952c30813ca
+    search: [skiing]
+  -
+    css: soccer
+    code: 0xe837
+    uid: d8813acae9d35ada76fda399a6000587
+    search: [soccer]
+  -
+    css: swimming
+    code: 0xe838
+    uid: d368c9b110be1daa21f992afca084b8c
+    search: [swimming]
+  -
+    css: tennis
+    code: 0xe839
+    uid: 8a4eb4f98d8e0f3686a741c952b03c08
+    search: [tennis]
+  -
+    css: theatre
+    code: 0xe83a
+    uid: 5f89d009e91c94c7c9be2f8711d7a2eb
+    search: [theatre]
+  -
+    css: toilet
+    code: 0xe83b
+    uid: 0d0a49f05cb202227853f85ce5f63cdc
+    search: [toilet]
+  -
+    css: town-hall
+    code: 0xe83c
+    uid: 4c8822c296f8b46e1b0a1c0f627be146
+    search: [town hall]
+  -
+    css: trash
+    code: 0xe83d
+    uid: cad619ef78a5500c1e5b3d021d2fdd65
+    search: [trash]
+  -
+    css: tree-1
+    code: 0xe83e
+    uid: 878dccd7b810bc231a132d86a3028afe
+    search: [tree]
+  -
+    css: tree-2
+    code: 0xe83f
+    uid: 35b65a48339004a947a1dea3092e1daa
+    search: [tree]
+  -
+    css: warehouse
+    code: 0xe840
+    uid: bc6ef9c6531c54e927e9dc18e45524b2
+    search: [warehouse]
