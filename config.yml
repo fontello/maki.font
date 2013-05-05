@@ -82,7 +82,7 @@ meta:
   license: BSD
   license_url: https://github.com/mapbox/maki/blob/gh-pages/LICENSE.txt
 
-  css_prefix: "icon-"
+  css_prefix_text: "icon-"
   columns: 4
 
 transform:
@@ -103,7 +103,7 @@ font:
   copyright: Copyright (C) Mapbox, LCC
 
   ascent: 850
-  descent: 150
+  descent: -150
   weight: Normal
 
 
