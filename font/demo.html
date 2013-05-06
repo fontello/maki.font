@@ -1,4 +1,13 @@
-<!DOCTYPE html><html><head><!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]--><meta charset="UTF-8"><style type="text/css">.clearfix {
+<!DOCTYPE html><html><head><!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]--><meta charset="UTF-8"><style type="text/css">/*
+ * Bootstrap v2.2.1
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+.clearfix {
   *zoom: 1;
 }
 .clearfix:before,
@@ -669,7 +678,7 @@ blockquote small {
   color: #999;
 }
 blockquote small:before {
-  content: '4  A0';
+  content: '\2014 \00A0';
 }
 blockquote.pull-right {
   float: right;
@@ -686,7 +695,7 @@ blockquote.pull-right small:before {
   content: '';
 }
 blockquote.pull-right small:after {
-  content: ' A0 4';
+  content: '\00A0 \2014';
 }
 q:before,
 q:after,
@@ -713,10 +722,19 @@ body {
   padding-top: 10px;
   z-index: 10;
 }
-.the-icons li {
+.footer {
+  color: #ddd;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 20px;
+}
+.footer a {
+  color: #ccc;
+  text-decoration: underline;
+}
+.the-icons {
   font-size: 14px;
   line-height: 24px;
-  height: 24px;
 }
 .switch {
   position: absolute;
@@ -738,25 +756,56 @@ body {
 }
 </style><style type="text/css">@font-face {
   font-family: 'maki';
-  src: url("maki.eot");
-  src: url("maki.eot?#iefix") format('embedded-opentype'), url("maki.woff") format('woff'), url("maki.ttf") format('truetype'), url("maki.svg#maki") format('svg');
+  src: url('../font/maki.eot?45180113');
+  src: url('../font/maki.eot?45180113#iefix') format('embedded-opentype'),
+       url('../font/maki.woff?45180113') format('woff'),
+       url('../font/maki.ttf?45180113') format('truetype'),
+       url('../font/maki.svg?45180113#maki') format('svg');
   font-weight: normal;
   font-style: normal;
 }
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
-  font-family: 'maki';
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'maki';
+    src: url('../font/maki.svg?45180113#maki') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "maki";
   font-style: normal;
   font-weight: normal;
   speak: none;
+ 
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
-  margin-right: 0.2em;
+  margin-right: .2em;
   text-align: center;
-  opacity: 0.8;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - magrins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
-</style><style type="text/css">
+ 
 .icon-aboveground-rail:before { content: '\e800'; } /* '' */
 .icon-airfield:before { content: '\e801'; } /* '' */
 .icon-airport:before { content: '\e802'; } /* '' */
@@ -829,4 +878,4 @@ body {
   }
 }
 </script></head><body><div class="container header"><h1>Maki
- <small>font demo</small></h1><label class="switch"><input type="checkbox" onclick="toggleCodes(this.checked)">show codes</label></div><div id="icons" class="container"><div class="row"><div class="span3"><ul class="the-icons unstyled"><li title="Code: 0xe800"><i class="icon-aboveground-rail"></i> <span class="i-name">icon-aboveground-rail</span><span class="i-code">0xe800</span></li><li title="Code: 0xe801"><i class="icon-airfield"></i> <span class="i-name">icon-airfield</span><span class="i-code">0xe801</span></li><li title="Code: 0xe802"><i class="icon-airport"></i> <span class="i-name">icon-airport</span><span class="i-code">0xe802</span></li><li title="Code: 0xe803"><i class="icon-art-gallery"></i> <span class="i-name">icon-art-gallery</span><span class="i-code">0xe803</span></li><li title="Code: 0xe804"><i class="icon-bar"></i> <span class="i-name">icon-bar</span><span class="i-code">0xe804</span></li><li title="Code: 0xe806"><i class="icon-baseball"></i> <span class="i-name">icon-baseball</span><span class="i-code">0xe806</span></li><li title="Code: 0xe807"><i class="icon-basketball"></i> <span class="i-name">icon-basketball</span><span class="i-code">0xe807</span></li><li title="Code: 0xe808"><i class="icon-beer"></i> <span class="i-name">icon-beer</span><span class="i-code">0xe808</span></li><li title="Code: 0xe809"><i class="icon-belowground-rail"></i> <span class="i-name">icon-belowground-rail</span><span class="i-code">0xe809</span></li><li title="Code: 0xe80a"><i class="icon-bicycle"></i> <span class="i-name">icon-bicycle</span><span class="i-code">0xe80a</span></li><li title="Code: 0xe80b"><i class="icon-bus"></i> <span class="i-name">icon-bus</span><span class="i-code">0xe80b</span></li><li title="Code: 0xe80c"><i class="icon-cafe"></i> <span class="i-name">icon-cafe</span><span class="i-code">0xe80c</span></li><li title="Code: 0xe80d"><i class="icon-campsite"></i> <span class="i-name">icon-campsite</span><span class="i-code">0xe80d</span></li><li title="Code: 0xe80e"><i class="icon-cemetery"></i> <span class="i-name">icon-cemetery</span><span class="i-code">0xe80e</span></li><li title="Code: 0xe80f"><i class="icon-cinema"></i> <span class="i-name">icon-cinema</span><span class="i-code">0xe80f</span></li><li title="Code: 0xe810"><i class="icon-college"></i> <span class="i-name">icon-college</span><span class="i-code">0xe810</span></li></ul></div><div class="span3"><ul class="the-icons unstyled"><li title="Code: 0xe811"><i class="icon-commerical-building"></i> <span class="i-name">icon-commerical-building</span><span class="i-code">0xe811</span></li><li title="Code: 0xe812"><i class="icon-credit-card"></i> <span class="i-name">icon-credit-card</span><span class="i-code">0xe812</span></li><li title="Code: 0xe813"><i class="icon-cricket"></i> <span class="i-name">icon-cricket</span><span class="i-code">0xe813</span></li><li title="Code: 0xe814"><i class="icon-embassy"></i> <span class="i-name">icon-embassy</span><span class="i-code">0xe814</span></li><li title="Code: 0xe815"><i class="icon-fast-food"></i> <span class="i-name">icon-fast-food</span><span class="i-code">0xe815</span></li><li title="Code: 0xe816"><i class="icon-ferry"></i> <span class="i-name">icon-ferry</span><span class="i-code">0xe816</span></li><li title="Code: 0xe817"><i class="icon-fire-station"></i> <span class="i-name">icon-fire-station</span><span class="i-code">0xe817</span></li><li title="Code: 0xe818"><i class="icon-football"></i> <span class="i-name">icon-football</span><span class="i-code">0xe818</span></li><li title="Code: 0xe819"><i class="icon-fuel"></i> <span class="i-name">icon-fuel</span><span class="i-code">0xe819</span></li><li title="Code: 0xe81a"><i class="icon-garden"></i> <span class="i-name">icon-garden</span><span class="i-code">0xe81a</span></li><li title="Code: 0xe81b"><i class="icon-giraffe"></i> <span class="i-name">icon-giraffe</span><span class="i-code">0xe81b</span></li><li title="Code: 0xe81c"><i class="icon-golf"></i> <span class="i-name">icon-golf</span><span class="i-code">0xe81c</span></li><li title="Code: 0xe81e"><i class="icon-grocery-store"></i> <span class="i-name">icon-grocery-store</span><span class="i-code">0xe81e</span></li><li title="Code: 0xe81f"><i class="icon-harbor"></i> <span class="i-name">icon-harbor</span><span class="i-code">0xe81f</span></li><li title="Code: 0xe820"><i class="icon-heliport"></i> <span class="i-name">icon-heliport</span><span class="i-code">0xe820</span></li><li title="Code: 0xe821"><i class="icon-hospital"></i> <span class="i-name">icon-hospital</span><span class="i-code">0xe821</span></li></ul></div><div class="span3"><ul class="the-icons unstyled"><li title="Code: 0xe822"><i class="icon-industrial-building"></i> <span class="i-name">icon-industrial-building</span><span class="i-code">0xe822</span></li><li title="Code: 0xe823"><i class="icon-library"></i> <span class="i-name">icon-library</span><span class="i-code">0xe823</span></li><li title="Code: 0xe824"><i class="icon-lodging"></i> <span class="i-name">icon-lodging</span><span class="i-code">0xe824</span></li><li title="Code: 0xe825"><i class="icon-london-underground"></i> <span class="i-name">icon-london-underground</span><span class="i-code">0xe825</span></li><li title="Code: 0xe826"><i class="icon-minefield"></i> <span class="i-name">icon-minefield</span><span class="i-code">0xe826</span></li><li title="Code: 0xe827"><i class="icon-monument"></i> <span class="i-name">icon-monument</span><span class="i-code">0xe827</span></li><li title="Code: 0xe828"><i class="icon-museum"></i> <span class="i-name">icon-museum</span><span class="i-code">0xe828</span></li><li title="Code: 0xe829"><i class="icon-pharmacy"></i> <span class="i-name">icon-pharmacy</span><span class="i-code">0xe829</span></li><li title="Code: 0xe82a"><i class="icon-pitch"></i> <span class="i-name">icon-pitch</span><span class="i-code">0xe82a</span></li><li title="Code: 0xe82b"><i class="icon-police"></i> <span class="i-name">icon-police</span><span class="i-code">0xe82b</span></li><li title="Code: 0xe82c"><i class="icon-post"></i> <span class="i-name">icon-post</span><span class="i-code">0xe82c</span></li><li title="Code: 0xe82d"><i class="icon-prison"></i> <span class="i-name">icon-prison</span><span class="i-code">0xe82d</span></li><li title="Code: 0xe82e"><i class="icon-rail"></i> <span class="i-name">icon-rail</span><span class="i-code">0xe82e</span></li><li title="Code: 0xe82f"><i class="icon-religious-christian"></i> <span class="i-name">icon-religious-christian</span><span class="i-code">0xe82f</span></li><li title="Code: 0xe830"><i class="icon-religious-islam"></i> <span class="i-name">icon-religious-islam</span><span class="i-code">0xe830</span></li><li title="Code: 0xe831"><i class="icon-religious-jewish"></i> <span class="i-name">icon-religious-jewish</span><span class="i-code">0xe831</span></li></ul></div><div class="span3"><ul class="the-icons unstyled"><li title="Code: 0xe832"><i class="icon-restaurant"></i> <span class="i-name">icon-restaurant</span><span class="i-code">0xe832</span></li><li title="Code: 0xe833"><i class="icon-roadblock"></i> <span class="i-name">icon-roadblock</span><span class="i-code">0xe833</span></li><li title="Code: 0xe834"><i class="icon-school"></i> <span class="i-name">icon-school</span><span class="i-code">0xe834</span></li><li title="Code: 0xe835"><i class="icon-shop"></i> <span class="i-name">icon-shop</span><span class="i-code">0xe835</span></li><li title="Code: 0xe836"><i class="icon-skiing"></i> <span class="i-name">icon-skiing</span><span class="i-code">0xe836</span></li><li title="Code: 0xe837"><i class="icon-soccer"></i> <span class="i-name">icon-soccer</span><span class="i-code">0xe837</span></li><li title="Code: 0xe838"><i class="icon-swimming"></i> <span class="i-name">icon-swimming</span><span class="i-code">0xe838</span></li><li title="Code: 0xe839"><i class="icon-tennis"></i> <span class="i-name">icon-tennis</span><span class="i-code">0xe839</span></li><li title="Code: 0xe83a"><i class="icon-theatre"></i> <span class="i-name">icon-theatre</span><span class="i-code">0xe83a</span></li><li title="Code: 0xe83b"><i class="icon-toilet"></i> <span class="i-name">icon-toilet</span><span class="i-code">0xe83b</span></li><li title="Code: 0xe83c"><i class="icon-town-hall"></i> <span class="i-name">icon-town-hall</span><span class="i-code">0xe83c</span></li><li title="Code: 0xe83d"><i class="icon-trash"></i> <span class="i-name">icon-trash</span><span class="i-code">0xe83d</span></li><li title="Code: 0xe83e"><i class="icon-tree-1"></i> <span class="i-name">icon-tree-1</span><span class="i-code">0xe83e</span></li><li title="Code: 0xe83f"><i class="icon-tree-2"></i> <span class="i-name">icon-tree-2</span><span class="i-code">0xe83f</span></li><li title="Code: 0xe840"><i class="icon-warehouse"></i> <span class="i-name">icon-warehouse</span><span class="i-code">0xe840</span></li></ul></div></div></div></body></html>
+ <small>font demo</small></h1><label class="switch"><input type="checkbox" onclick="toggleCodes(this.checked)">show codes</label></div><div id="icons" class="container"><div class="row"><div title="Code: 0xe800" class="the-icons span3"><i class="icon-aboveground-rail"></i> <span class="i-name">icon-aboveground-rail</span><span class="i-code">0xe800</span></div><div title="Code: 0xe801" class="the-icons span3"><i class="icon-airfield"></i> <span class="i-name">icon-airfield</span><span class="i-code">0xe801</span></div><div title="Code: 0xe802" class="the-icons span3"><i class="icon-airport"></i> <span class="i-name">icon-airport</span><span class="i-code">0xe802</span></div><div title="Code: 0xe803" class="the-icons span3"><i class="icon-art-gallery"></i> <span class="i-name">icon-art-gallery</span><span class="i-code">0xe803</span></div></div><div class="row"><div title="Code: 0xe804" class="the-icons span3"><i class="icon-bar"></i> <span class="i-name">icon-bar</span><span class="i-code">0xe804</span></div><div title="Code: 0xe806" class="the-icons span3"><i class="icon-baseball"></i> <span class="i-name">icon-baseball</span><span class="i-code">0xe806</span></div><div title="Code: 0xe807" class="the-icons span3"><i class="icon-basketball"></i> <span class="i-name">icon-basketball</span><span class="i-code">0xe807</span></div><div title="Code: 0xe808" class="the-icons span3"><i class="icon-beer"></i> <span class="i-name">icon-beer</span><span class="i-code">0xe808</span></div></div><div class="row"><div title="Code: 0xe809" class="the-icons span3"><i class="icon-belowground-rail"></i> <span class="i-name">icon-belowground-rail</span><span class="i-code">0xe809</span></div><div title="Code: 0xe80a" class="the-icons span3"><i class="icon-bicycle"></i> <span class="i-name">icon-bicycle</span><span class="i-code">0xe80a</span></div><div title="Code: 0xe80b" class="the-icons span3"><i class="icon-bus"></i> <span class="i-name">icon-bus</span><span class="i-code">0xe80b</span></div><div title="Code: 0xe80c" class="the-icons span3"><i class="icon-cafe"></i> <span class="i-name">icon-cafe</span><span class="i-code">0xe80c</span></div></div><div class="row"><div title="Code: 0xe80d" class="the-icons span3"><i class="icon-campsite"></i> <span class="i-name">icon-campsite</span><span class="i-code">0xe80d</span></div><div title="Code: 0xe80e" class="the-icons span3"><i class="icon-cemetery"></i> <span class="i-name">icon-cemetery</span><span class="i-code">0xe80e</span></div><div title="Code: 0xe80f" class="the-icons span3"><i class="icon-cinema"></i> <span class="i-name">icon-cinema</span><span class="i-code">0xe80f</span></div><div title="Code: 0xe810" class="the-icons span3"><i class="icon-college"></i> <span class="i-name">icon-college</span><span class="i-code">0xe810</span></div></div><div class="row"><div title="Code: 0xe811" class="the-icons span3"><i class="icon-commerical-building"></i> <span class="i-name">icon-commerical-building</span><span class="i-code">0xe811</span></div><div title="Code: 0xe812" class="the-icons span3"><i class="icon-credit-card"></i> <span class="i-name">icon-credit-card</span><span class="i-code">0xe812</span></div><div title="Code: 0xe813" class="the-icons span3"><i class="icon-cricket"></i> <span class="i-name">icon-cricket</span><span class="i-code">0xe813</span></div><div title="Code: 0xe814" class="the-icons span3"><i class="icon-embassy"></i> <span class="i-name">icon-embassy</span><span class="i-code">0xe814</span></div></div><div class="row"><div title="Code: 0xe815" class="the-icons span3"><i class="icon-fast-food"></i> <span class="i-name">icon-fast-food</span><span class="i-code">0xe815</span></div><div title="Code: 0xe816" class="the-icons span3"><i class="icon-ferry"></i> <span class="i-name">icon-ferry</span><span class="i-code">0xe816</span></div><div title="Code: 0xe817" class="the-icons span3"><i class="icon-fire-station"></i> <span class="i-name">icon-fire-station</span><span class="i-code">0xe817</span></div><div title="Code: 0xe818" class="the-icons span3"><i class="icon-football"></i> <span class="i-name">icon-football</span><span class="i-code">0xe818</span></div></div><div class="row"><div title="Code: 0xe819" class="the-icons span3"><i class="icon-fuel"></i> <span class="i-name">icon-fuel</span><span class="i-code">0xe819</span></div><div title="Code: 0xe81a" class="the-icons span3"><i class="icon-garden"></i> <span class="i-name">icon-garden</span><span class="i-code">0xe81a</span></div><div title="Code: 0xe81b" class="the-icons span3"><i class="icon-giraffe"></i> <span class="i-name">icon-giraffe</span><span class="i-code">0xe81b</span></div><div title="Code: 0xe81c" class="the-icons span3"><i class="icon-golf"></i> <span class="i-name">icon-golf</span><span class="i-code">0xe81c</span></div></div><div class="row"><div title="Code: 0xe81e" class="the-icons span3"><i class="icon-grocery-store"></i> <span class="i-name">icon-grocery-store</span><span class="i-code">0xe81e</span></div><div title="Code: 0xe81f" class="the-icons span3"><i class="icon-harbor"></i> <span class="i-name">icon-harbor</span><span class="i-code">0xe81f</span></div><div title="Code: 0xe820" class="the-icons span3"><i class="icon-heliport"></i> <span class="i-name">icon-heliport</span><span class="i-code">0xe820</span></div><div title="Code: 0xe821" class="the-icons span3"><i class="icon-hospital"></i> <span class="i-name">icon-hospital</span><span class="i-code">0xe821</span></div></div><div class="row"><div title="Code: 0xe822" class="the-icons span3"><i class="icon-industrial-building"></i> <span class="i-name">icon-industrial-building</span><span class="i-code">0xe822</span></div><div title="Code: 0xe823" class="the-icons span3"><i class="icon-library"></i> <span class="i-name">icon-library</span><span class="i-code">0xe823</span></div><div title="Code: 0xe824" class="the-icons span3"><i class="icon-lodging"></i> <span class="i-name">icon-lodging</span><span class="i-code">0xe824</span></div><div title="Code: 0xe825" class="the-icons span3"><i class="icon-london-underground"></i> <span class="i-name">icon-london-underground</span><span class="i-code">0xe825</span></div></div><div class="row"><div title="Code: 0xe826" class="the-icons span3"><i class="icon-minefield"></i> <span class="i-name">icon-minefield</span><span class="i-code">0xe826</span></div><div title="Code: 0xe827" class="the-icons span3"><i class="icon-monument"></i> <span class="i-name">icon-monument</span><span class="i-code">0xe827</span></div><div title="Code: 0xe828" class="the-icons span3"><i class="icon-museum"></i> <span class="i-name">icon-museum</span><span class="i-code">0xe828</span></div><div title="Code: 0xe829" class="the-icons span3"><i class="icon-pharmacy"></i> <span class="i-name">icon-pharmacy</span><span class="i-code">0xe829</span></div></div><div class="row"><div title="Code: 0xe82a" class="the-icons span3"><i class="icon-pitch"></i> <span class="i-name">icon-pitch</span><span class="i-code">0xe82a</span></div><div title="Code: 0xe82b" class="the-icons span3"><i class="icon-police"></i> <span class="i-name">icon-police</span><span class="i-code">0xe82b</span></div><div title="Code: 0xe82c" class="the-icons span3"><i class="icon-post"></i> <span class="i-name">icon-post</span><span class="i-code">0xe82c</span></div><div title="Code: 0xe82d" class="the-icons span3"><i class="icon-prison"></i> <span class="i-name">icon-prison</span><span class="i-code">0xe82d</span></div></div><div class="row"><div title="Code: 0xe82e" class="the-icons span3"><i class="icon-rail"></i> <span class="i-name">icon-rail</span><span class="i-code">0xe82e</span></div><div title="Code: 0xe82f" class="the-icons span3"><i class="icon-religious-christian"></i> <span class="i-name">icon-religious-christian</span><span class="i-code">0xe82f</span></div><div title="Code: 0xe830" class="the-icons span3"><i class="icon-religious-islam"></i> <span class="i-name">icon-religious-islam</span><span class="i-code">0xe830</span></div><div title="Code: 0xe831" class="the-icons span3"><i class="icon-religious-jewish"></i> <span class="i-name">icon-religious-jewish</span><span class="i-code">0xe831</span></div></div><div class="row"><div title="Code: 0xe832" class="the-icons span3"><i class="icon-restaurant"></i> <span class="i-name">icon-restaurant</span><span class="i-code">0xe832</span></div><div title="Code: 0xe833" class="the-icons span3"><i class="icon-roadblock"></i> <span class="i-name">icon-roadblock</span><span class="i-code">0xe833</span></div><div title="Code: 0xe834" class="the-icons span3"><i class="icon-school"></i> <span class="i-name">icon-school</span><span class="i-code">0xe834</span></div><div title="Code: 0xe835" class="the-icons span3"><i class="icon-shop"></i> <span class="i-name">icon-shop</span><span class="i-code">0xe835</span></div></div><div class="row"><div title="Code: 0xe836" class="the-icons span3"><i class="icon-skiing"></i> <span class="i-name">icon-skiing</span><span class="i-code">0xe836</span></div><div title="Code: 0xe837" class="the-icons span3"><i class="icon-soccer"></i> <span class="i-name">icon-soccer</span><span class="i-code">0xe837</span></div><div title="Code: 0xe838" class="the-icons span3"><i class="icon-swimming"></i> <span class="i-name">icon-swimming</span><span class="i-code">0xe838</span></div><div title="Code: 0xe839" class="the-icons span3"><i class="icon-tennis"></i> <span class="i-name">icon-tennis</span><span class="i-code">0xe839</span></div></div><div class="row"><div title="Code: 0xe83a" class="the-icons span3"><i class="icon-theatre"></i> <span class="i-name">icon-theatre</span><span class="i-code">0xe83a</span></div><div title="Code: 0xe83b" class="the-icons span3"><i class="icon-toilet"></i> <span class="i-name">icon-toilet</span><span class="i-code">0xe83b</span></div><div title="Code: 0xe83c" class="the-icons span3"><i class="icon-town-hall"></i> <span class="i-name">icon-town-hall</span><span class="i-code">0xe83c</span></div><div title="Code: 0xe83d" class="the-icons span3"><i class="icon-trash"></i> <span class="i-name">icon-trash</span><span class="i-code">0xe83d</span></div></div><div class="row"><div title="Code: 0xe83e" class="the-icons span3"><i class="icon-tree-1"></i> <span class="i-name">icon-tree-1</span><span class="i-code">0xe83e</span></div><div title="Code: 0xe83f" class="the-icons span3"><i class="icon-tree-2"></i> <span class="i-name">icon-tree-2</span><span class="i-code">0xe83f</span></div><div title="Code: 0xe840" class="the-icons span3"><i class="icon-warehouse"></i> <span class="i-name">icon-warehouse</span><span class="i-code">0xe840</span></div></div></div><div class="container footer">Generated by <a href="http://fontello.com">fontello.com</a></div></body></html>
