@@ -37,6 +37,7 @@ plugins:
   - convertTransform
   - convertPathData:
       negativeExtraSpace: false
+      straightCurves: false
   - removeEmptyAttrs
   - removeEmptyContainers
   - mergePaths
@@ -44,6 +45,7 @@ plugins:
   - removeUnusedNS
   - transformsWithOnePath:
       scale: 1.2
+      negativeExtraSpace: false
   - transformsWithOnePath:
       hcrop: true
       negativeExtraSpace: false
