@@ -361,7 +361,7 @@ glyphs:
     css: school
     code: 0xe834
     uid: 653750436fc99eeb29ccd487e6a5bfa6
-    search: [school]
+    search: [school, people, children, running]
   -
     css: shop
     code: 0xe835
@@ -401,7 +401,7 @@ glyphs:
     css: town-hall
     code: 0xe83c
     uid: 4c8822c296f8b46e1b0a1c0f627be146
-    search: [town hall]
+    search: [town hall, bank, university, institution, temple, columns]
   -
     css: trash
     code: 0xe83d
